@@ -1,0 +1,73 @@
+---
+title: "seminar02b"
+author: "Ali"
+date: "Wednesday, January 21, 2015"
+output:
+  html_document:
+    keep_md: yes
+---
+
+tosses = times the coin is flipped in one try
+tries = toss events
+p = probability of getting a head
+turn coinflips into a function
+
+coinflips <- function(tosses, tries, p){
+  tab <- matrix(runif(tosses * tries) > p,
+              nrow = length(tosses), ncol=tries)
+  y <- rowSums(tab)
+  y.mean <- mean(y)
+  prop <- (y.mean/tries)
+  return(prop)
+}
+coinflips(1, 100, 0.5)
+
+```{r}
+coinflips <- function(tosses, tries, p){
+  tab <- matrix(runif(tosses * tries) > p,
+              nrow = length(tosses), ncol=tries)
+  y <- rowSums(tab)
+  y.mean <- mean(y)
+  prop <- (y.mean/tries)
+  return(prop)
+}
+coinflips(1, 100, 0.5)
+```
+
+loop over many tries
+
+B <- 1000
+n <- 1
+track <- matrix(nrow = B, ncol = n, dimnames = list(c(1:B),names(n)))
+for (i in 1:B) {
+  track[i,] <- coinflips(1, i, 0.5)
+}
+tail(track)
+```{r}
+B <- 1000
+n <- 1
+track <- matrix(nrow = B, ncol = n, dimnames = list(c(1:B),names(n)))
+for (i in 1:B) {
+  track[i,] <- coinflips(1, i, 0.5)
+}
+tail(track)
+```
+expect convergence around y = 0
+make scatter plot
+
+plot(track, xlab="flips", col="red")
+legend("topright", c("p = 0.5"))
+
+```{r, echo=FALSE}
+plot(track, xlab="flips", col="red")
+legend("topright", c("p = 0.5"))
+```
+or make a boxplot
+
+boxplot(track)
+legend("topright", c("p = 0.5"))
+
+```{r, echo=FALSE}
+boxplot(track)
+legend("topright", c("p = 0.5"))
+```
