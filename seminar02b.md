@@ -60,10 +60,10 @@ make scatter plot
 plot(track, xlab="flips", col="red")
 legend("topright", c("p = 0.5"))
 
-``{r, echo=FALSE}
+```{r, echo=FALSE}
 plot(track, xlab="flips", col="red")
 legend("topright", c("p = 0.5"))
-``
+```
 or make a boxplot
 
 boxplot(track)
