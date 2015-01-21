@@ -6,7 +6,7 @@ Alison
 Seminars
 --------
 
-- [seminar2](https://github.com/wdurnoUBC/testRepo/blob/master/seminars/sem2.md)
+- [seminar2](https://github.com/AlisonMcAfee/GSAT540/blob/master/seminar02b.md)
 
 Homework
 --------
