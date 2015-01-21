@@ -1,14 +1,7 @@
 # GSAT540
 # Homepage
-Evan  
-2015-01-05  
-
-Evan's example repository
-=========================
-
-Group project details
----------------------
-text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+Alison 
+2015-01-21
 
 Seminars
 --------
