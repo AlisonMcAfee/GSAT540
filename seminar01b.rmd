@@ -1,0 +1,38 @@
+---
+title: "seminar01b"
+author: "Ali"
+date: "Thursday, January 22, 2015"
+output:
+  html_document:
+    keep_md: yes
+---
+
+Playing with GSE4051_MINI.txt file
+
+```{r}
+read.delim("GSE4051_MINI.txt")
+prDat <- read.table("GSE4051_MINI.txt", header = TRUE, row.names = 1)
+str(prDat)
+nrow(prDat) 
+ncol(prDat) 
+head(prDat)
+tail(prDat) 
+names(prDat)
+str(prDat)
+levels(prDat$devStage)
+summary(prDat$devStage)
+summary(prDat$gType)
+table(prDat$devStage, prDat$gType)
+```
+Intended experimental design? Maybe to see how developmetn/life expectancy of the KO mouse differs from wt. Looks like it's the same, though
+
+```{r}
+summary(prDat$crabHammer) #...etc
+weeDat <- subset(prDat, subset = poisonFang > 7.5)
+summary(weeDat)
+str(weeDat$poisonFang)
+prDat[c("Sample_16", "Sample_38"), "eggBomb"]
+quantile(prDat$eggBomb, .1)
+qDat <- subset(prDat, subset = eggBomb < 6.1844)
+rownames(qDat)
+```
