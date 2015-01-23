@@ -1,0 +1,121 @@
+---
+title: "seminar02c"
+author: "Ali"
+date: "Thursday, January 22, 2015"
+output:
+  html_document:
+    keep_md: yes
+---
+
+---
+title: "seminar02c"
+author: "Ali"
+date: "Thursday, January 22, 2015"
+output: html_document
+---
+Exercise:
+
+Generate some data from a different normal distribution, i.e. where the mean is not 0 and/or the standard deviation is not 1. Make the new parameter values extreme, so the data will be obviously different.
+
+
+```{r}
+rnorm(n = 10, sd = 1, mean = 10)
+n <- 5
+B <- c(5)
+x <- matrix(rnorm(n * B, sd = 1, mean = 10), nrow = n)
+rownames(x) <- sprintf("obs%02d", 1:n)
+colnames(x) <- sprintf("samp%02d", 1:B)
+x
+```
+Exercise:
+"Repeat the above for a different distribution."
+
+
+```{r}
+set.seed(10)
+rnorm(n = 10, sd = 1, mean = 10)
+n <- 5
+B <- c(5)
+x <- matrix(rnorm(n * B, sd = 1, mean = 10), nrow = n)
+rownames(x) <- sprintf("obs%02d", 1:n)
+colnames(x) <- sprintf("samp%02d", 1:B)
+x
+```
+
+Exercise: 
+
+Recall the claim that the expected value of the sample mean is the true mean. Compute the average of the 4 sample means we have. Is it (sort of) close the true mean? Feel free to change n or B at any point.
+
+```{r}
+means <- colMeans(x)
+mean(means) 
+#answer: yes, close to 10!
+```
+
+Exercise: 
+
+Recall the Weak Law of Large Numbers said that, as the sample size gets bigger, the distribution of the sample means gets more concentrated around the true mean.
+
+```{r}
+#had to look at the source code for this one
+B <- 1000
+x10 <- matrix(rnorm(10 * B), nrow = 10)
+x100 <- matrix(rnorm(100 * B), nrow = 100)
+x1000 <- matrix(rnorm(1000 * B), nrow = 1000)
+x10000 <- matrix(rnorm(10000 * B), nrow = 10000)
+xBar10 <- colMeans(x10)
+xBar100 <- colMeans(x100)
+xBar1000 <- colMeans(x1000)
+xBar10000 <- colMeans(x10000)
+xBarSd10 <- sd(colMeans(x10))
+xBarSd100 <- sd(colMeans(x100))
+xBarSd1000 <- sd(colMeans(x1000))
+xBarSd10000 <- sd(colMeans(x10000))
+cbind(sampSize = c(10, 100, 1000, 10000),
+      trueSEM = 1 / sqrt(c(10, 100, 1000, 10000)),
+      obsSEM = c(xBarSd10, xBarSd100, xBarSd1000, xBarSd10000))
+```
+
+Exercise: 
+
+Generate a reasonably large sample from some normal distribution (it need not be standard normal!). Pick a threshhold. What is the CDF at that threshhold, i.e. what's the true probability of seeing an observation less than or equal to the threshhold? Use your large sample to compute the observed proportion of observations that are less than threshhold. Are the two numbers sort of close? Hint: If x is a numeric vector, then mean(x <= threshhold) computes the proportion of values less than or equal to threshhold
+
+```{r}
+x <- rpois(10, lambda = 5)
+ppois(6, lambda = 5)
+mean(x <= 6)
+#sort of close!
+```
+
+Exercise: 
+
+Do the same for a variety of sample sizes. Do the two numbers tend to be closer for larger samples?
+
+```{r}
+ppois(6, lambda = 5)
+x <- rpois(10, lambda = 5)
+mean(x <= 6)
+x <- rpois(100, lambda = 5)
+mean(x <= 6)
+x <- rpois(1000, lambda = 5)
+mean(x <= 6)
+x <- rpois(100000000, lambda = 5)
+mean(x <= 6)
+#yes, the two numbers tend to be closer with higher n
+```
+Exercise: 
+
+Do the same for a different distribution.
+
+Exercise: 
+
+Instead of focusing on tail probabilities, focus on the probability of the observed values falling in an interval.
+
+```{r}
+bin <- rbinom(10, size = 100, prob = 0.78)
+range <- (mean(bin >= 78) - mean(bin >= 80))
+range
+pbinom(78, size = 100, prob = .78)
+
+```
+
