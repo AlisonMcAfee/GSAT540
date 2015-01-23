@@ -16,10 +16,3 @@ Homework
 While you're here
 -----------------
 
-Take note that Github can render R code executions nicely.
-
-```r
-hist(rnorm(100))
-```
-
-![](README_files/figure-html/unnamed-chunk-1-1.png) 
