@@ -60,7 +60,14 @@ make scatter plot
 plot(track, xlab="flips", col="red")
 legend("topright", c("p = 0.5"))
 
+<<<<<<< HEAD
 ![](seminar02b_files/figure-html/unnamed-chunk-3-1.png) 
+=======
+```{r, echo=FALSE}
+plot(track, xlab="flips", col="red")
+legend("topright", c("p = 0.5"))
+```
+>>>>>>> 89b43bb333de1c0e34b49147a9f927ef2d2d80ae
 or make a boxplot
 
 boxplot(track)

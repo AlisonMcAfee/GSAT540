@@ -61,4 +61,8 @@ legend("topright", c("p = 0.5"))
 ```{r, echo=FALSE}
 boxplot(track)
 legend("topright", c("p = 0.5"))
+<<<<<<< HEAD
 ```
+=======
+``
+>>>>>>> 89b43bb333de1c0e34b49147a9f927ef2d2d80ae
