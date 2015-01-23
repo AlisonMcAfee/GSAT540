@@ -5,21 +5,13 @@ Alison
 
 Seminars
 --------
-
-- [seminar2](https://github.com/wdurnoUBC/testRepo/blob/master/seminars/sem2.md)
+- [seminar1]
+- [seminar2](https://github.com/AlisonMcAfee/GSAT540/blob/master/seminar02b.md)
+- [seminar3]
 
 Homework
 --------
 
-- [Homework1](https://github.com/wdurnoUBC/testRepo/blob/master/homework/hw1.md)
+- [Homework1]
 
-While you're here
------------------
 
-Take note that Github can render R code executions nicely.
-
-```r
-hist(rnorm(100))
-```
-
-![](README_files/figure-html/unnamed-chunk-1-1.png) 
