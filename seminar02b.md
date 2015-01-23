@@ -22,7 +22,7 @@ coinflips(1, 100, 0.5)
 ```
 
 ```
-## [1] 0.48
+## [1] 0.55
 ```
 
 loop over many tries
@@ -47,12 +47,12 @@ tail(track)
 
 ```
 ##           [,1]
-## 995  0.4814070
-## 996  0.4809237
-## 997  0.4934804
-## 998  0.4669339
-## 999  0.4904905
-## 1000 0.4920000
+## 995  0.4783920
+## 996  0.5100402
+## 997  0.5245737
+## 998  0.5160321
+## 999  0.5145145
+## 1000 0.5010000
 ```
 expect convergence around y = 0
 make scatter plot
@@ -60,16 +60,10 @@ make scatter plot
 plot(track, xlab="flips", col="red")
 legend("topright", c("p = 0.5"))
 
-``{r, echo=FALSE}
-plot(track, xlab="flips", col="red")
-legend("topright", c("p = 0.5"))
-``
+![](seminar02b_files/figure-html/unnamed-chunk-3-1.png) 
 or make a boxplot
 
 boxplot(track)
 legend("topright", c("p = 0.5"))
 
-``{r, echo=FALSE}
-boxplot(track)
-legend("topright", c("p = 0.5"))
-``
+![](seminar02b_files/figure-html/unnamed-chunk-4-1.png) 
