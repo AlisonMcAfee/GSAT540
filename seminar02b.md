@@ -2,10 +2,13 @@
 Ali  
 Wednesday, January 21, 2015  
 
-tosses = times the coin is flipped in one try\n
-tries = toss events
-p = probability of getting a head
-turn coinflips into a function
+tosses = times the coin is flipped in one try,
+
+tries = toss events,
+
+p = probability of getting a head,
+
+turn coinflips into a function:
 
 
 
@@ -22,18 +25,11 @@ coinflips(1, 100, 0.5)
 ```
 
 ```
-## [1] 0.53
+## [1] 0.49
 ```
 
 loop over many tries
 
-B <- 1000
-n <- 1
-track <- matrix(nrow = B, ncol = n, dimnames = list(c(1:B),names(n)))
-for (i in 1:B) {
-  track[i,] <- coinflips(1, i, 0.5)
-}
-tail(track)
 
 ```r
 B <- 1000
@@ -47,23 +43,19 @@ tail(track)
 
 ```
 ##           [,1]
-## 995  0.4894472
-## 996  0.5140562
-## 997  0.4744233
-## 998  0.5140281
-## 999  0.5065065
-## 1000 0.4860000
+## 995  0.4804020
+## 996  0.4849398
+## 997  0.5085256
+## 998  0.5340681
+## 999  0.5085085
+## 1000 0.4930000
 ```
-expect convergence around y = 0
+expect convergence around y = 0,
+
 make scatter plot
 
-plot(track, xlab="flips", col="red")
-legend("topright", c("p = 0.5"))
-
 ![](seminar02b_files/figure-html/unnamed-chunk-3-1.png) 
-or make a boxplot
 
-boxplot(track)
-legend("topright", c("p = 0.5"))
+or make a boxplot
 
 ![](seminar02b_files/figure-html/unnamed-chunk-4-1.png) 
