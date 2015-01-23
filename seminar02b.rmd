@@ -7,7 +7,7 @@ output:
     keep_md: yes
 ---
 
-tosses = times the coin is flipped in one try
+tosses = times the coin is flipped in one try\n
 tries = toss events
 p = probability of getting a head
 turn coinflips into a function
@@ -61,8 +61,4 @@ legend("topright", c("p = 0.5"))
 ```{r, echo=FALSE}
 boxplot(track)
 legend("topright", c("p = 0.5"))
-<<<<<<< HEAD
 ```
-=======
-``
->>>>>>> 89b43bb333de1c0e34b49147a9f927ef2d2d80ae

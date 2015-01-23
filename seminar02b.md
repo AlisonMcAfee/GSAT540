@@ -2,7 +2,7 @@
 Ali  
 Wednesday, January 21, 2015  
 
-tosses = times the coin is flipped in one try
+tosses = times the coin is flipped in one try\n
 tries = toss events
 p = probability of getting a head
 turn coinflips into a function
@@ -22,7 +22,7 @@ coinflips(1, 100, 0.5)
 ```
 
 ```
-## [1] 0.55
+## [1] 0.5
 ```
 
 loop over many tries
@@ -47,12 +47,12 @@ tail(track)
 
 ```
 ##           [,1]
-## 995  0.4783920
-## 996  0.5100402
-## 997  0.5245737
-## 998  0.5160321
-## 999  0.5145145
-## 1000 0.5010000
+## 995  0.4954774
+## 996  0.4879518
+## 997  0.5045135
+## 998  0.4949900
+## 999  0.5075075
+## 1000 0.5100000
 ```
 expect convergence around y = 0
 make scatter plot
@@ -60,14 +60,7 @@ make scatter plot
 plot(track, xlab="flips", col="red")
 legend("topright", c("p = 0.5"))
 
-<<<<<<< HEAD
 ![](seminar02b_files/figure-html/unnamed-chunk-3-1.png) 
-=======
-```{r, echo=FALSE}
-plot(track, xlab="flips", col="red")
-legend("topright", c("p = 0.5"))
-```
->>>>>>> 89b43bb333de1c0e34b49147a9f927ef2d2d80ae
 or make a boxplot
 
 boxplot(track)
