@@ -34,7 +34,7 @@ paletteSize <- 50
 jRdPuPalette <- jRdPuFun(paletteSize)
 ```
 
-![]() 
+![](seminar03b_files/figure-html/unnamed-chunk-2-1.png) 
 
 
 I had trouble figuring out how to do hierarchical clustering in ggplot, so here is a similar map generated with the in-built "heatmap" function. 
