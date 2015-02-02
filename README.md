@@ -11,6 +11,7 @@ Seminars
 - [seminar3b](https://github.com/AlisonMcAfee/GSAT540/blob/master/seminar03b.md)
 - [seminar3c](https://github.com/AlisonMcAfee/GSAT540/blob/master/seminar03c.md)
 - [seminar4a](https://github.com/AlisonMcAfee/GSAT540/blob/master/seminar04a.md)
+- [seminar4b](https://github.com/AlisonMcAfee/GSAT540/blob/master/seminar04b.md)
 
 Homework
 --------
